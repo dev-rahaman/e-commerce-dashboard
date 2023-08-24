@@ -57,8 +57,8 @@ const Order = () => {
     <div className="p-4 sm:ml-64">
       <div className="p-4 border-gray-200 rounded-lg dark:border-gray-700">
         <PageName name={"Orders"} />
-        <div class="lg:grid grid-cols-3 gap-4 mb-4">
-          <div class="flex items-center justify-between h-24 rounded text-white bg-[#497cf1] p-3 dark:bg-gray-800">
+        <div className="lg:grid grid-cols-3 gap-4 mb-4">
+          <div className="flex items-center justify-between h-24 rounded text-white bg-[#497cf1] p-3 dark:bg-gray-800">
             <div>
               <h3 className="font-extrabold">Completed Orders</h3>
               <Image
@@ -70,7 +70,7 @@ const Order = () => {
             </div>
             <h3 className="text-4xl text-center font-bold">202</h3>
           </div>
-          <div class="flex items-center justify-between h-24 rounded text-white bg-[#ba2bf7] p-3 dark:bg-gray-800">
+          <div className="flex items-center justify-between h-24 rounded text-white bg-[#ba2bf7] p-3 dark:bg-gray-800">
             <div>
               <h3 className="font-extrabold">Pending Orders</h3>
               <Image
@@ -82,7 +82,7 @@ const Order = () => {
             </div>
             <h3 className="text-4xl text-center font-bold">20</h3>
           </div>
-          <div class="flex items-center justify-between h-24 rounded text-white bg-[#497cf1] p-3 dark:bg-gray-800">
+          <div className="flex items-center justify-between h-24 rounded text-white bg-[#497cf1] p-3 dark:bg-gray-800">
             <div>
               <h3 className="font-extrabold">Canceled Orders</h3>
               <Image
