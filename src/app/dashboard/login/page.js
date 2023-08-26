@@ -1,4 +1,5 @@
 "use client";
+import Recaptcha from "@/components/Recaptcha";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -42,6 +43,7 @@ const Login = () => {
                   required
                 />
               </div>
+              <Recaptcha />
             </form>
           </div>
           <div>
