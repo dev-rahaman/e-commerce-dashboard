@@ -20,7 +20,6 @@ const AppProduct = () => {
     <div className="p-4 sm:ml-64">
       <div className="p-4 border-gray-200 rounded-lg dark:border-gray-700">
         <PageName name={"Add Product"} />
-
         <div className="grid grid-cols-2 gap-10 mt-10">
           <div className="dark:bg-gray-800 p-10 rounded bg-[#16193a]">
             <form onSubmit={handleSubmit}>

@@ -62,14 +62,94 @@ const Dashboard = () => {
             <LineChartExample />
           </div>
         </div>
-        <div className="grid grid-cols-2 justify-items-center">
-          <div className="dark:bg-gray-800">
+
+        <div className="grid grid-cols-2 gap-4 mb-4 ">
+          <div className="rounded bg-[#212130] dark:bg-gray-800">
+            <h2 className="text-white my-5  text-4xl text-center font-bold">
+              To Days Sales
+            </h2>
             <PieChartComponent />
-            <Visitor />
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800">
-            <UsersAccordion />
+          <div className="h-[380px] custom-scrollbar overflow-auto rounded bg-[#212130] dark:bg-gray-800">
+            <h2 className="text-white my-5  text-4xl text-center font-bold">
+              Recent Activity
+            </h2>
+            <UsersAccordion
+              title={"What is E-Commerce?"}
+              content={
+                "E-commerce, short for electronic commerce, refers to the buying and selling of goods and services over the internet. It has revolutionized the way we shop, providing convenience, accessibility, and a global marketplace at our fingertips. E-commerce encompasses a wide range of online transactions, from purchasing products on online marketplaces to ordering groceries, booking travel accommodations, and subscribing to digital services. In the digital age, e-commerce has become an integral part of modern business strategies. With its ability to reach a vast audience, streamline transactions, and offer personalized shopping experiences, e-commerce has reshaped industries and consumer behaviors."
+              }
+            />
+            <UsersAccordion
+              title="Exploring Our E-Commerce Selection"
+              content="We are excited to present a diverse range of products that cater to your needs and preferences. Our e-commerce platform offers a seamless shopping experience, allowing you to explore, choose, and purchase products from the comfort of your home."
+            />
+            <UsersAccordion
+              title="Product Categories"
+              content="To enhance your shopping journey, we've organized our products into various categories. Whether you're looking for the latest fashion trends, cutting-edge electronics, home essentials, or unique gifts, our selection has something for everyone."
+            />
+            <UsersAccordion
+              title="Product Categories"
+              content="To enhance your shopping journey, we've organized our products into various categories. Whether you're looking for the latest fashion trends, cutting-edge electronics, home essentials, or unique gifts, our selection has something for everyone."
+            />
+            <UsersAccordion
+              title={"What is E-Commerce?"}
+              content={
+                "E-commerce, short for electronic commerce, refers to the buying and selling of goods and services over the internet. It has revolutionized the way we shop, providing convenience, accessibility, and a global marketplace at our fingertips. E-commerce encompasses a wide range of online transactions, from purchasing products on online marketplaces to ordering groceries, booking travel accommodations, and subscribing to digital services. In the digital age, e-commerce has become an integral part of modern business strategies. With its ability to reach a vast audience, streamline transactions, and offer personalized shopping experiences, e-commerce has reshaped industries and consumer behaviors."
+              }
+            />
+            <UsersAccordion
+              title="Exploring Our E-Commerce Selection"
+              content="We are excited to present a diverse range of products that cater to your needs and preferences. Our e-commerce platform offers a seamless shopping experience, allowing you to explore, choose, and purchase products from the comfort of your home."
+            />
+            <UsersAccordion
+              title="Product Categories"
+              content="To enhance your shopping journey, we've organized our products into various categories. Whether you're looking for the latest fashion trends, cutting-edge electronics, home essentials, or unique gifts, our selection has something for everyone."
+            />
+            <UsersAccordion
+              title="Product Categories"
+              content="To enhance your shopping journey, we've organized our products into various categories. Whether you're looking for the latest fashion trends, cutting-edge electronics, home essentials, or unique gifts, our selection has something for everyone."
+            />
+            <UsersAccordion
+              title={"What is E-Commerce?"}
+              content={
+                "E-commerce, short for electronic commerce, refers to the buying and selling of goods and services over the internet. It has revolutionized the way we shop, providing convenience, accessibility, and a global marketplace at our fingertips. E-commerce encompasses a wide range of online transactions, from purchasing products on online marketplaces to ordering groceries, booking travel accommodations, and subscribing to digital services. In the digital age, e-commerce has become an integral part of modern business strategies. With its ability to reach a vast audience, streamline transactions, and offer personalized shopping experiences, e-commerce has reshaped industries and consumer behaviors."
+              }
+            />
+            <UsersAccordion
+              title="Exploring Our E-Commerce Selection"
+              content="We are excited to present a diverse range of products that cater to your needs and preferences. Our e-commerce platform offers a seamless shopping experience, allowing you to explore, choose, and purchase products from the comfort of your home."
+            />
+            <UsersAccordion
+              title="Product Categories"
+              content="To enhance your shopping journey, we've organized our products into various categories. Whether you're looking for the latest fashion trends, cutting-edge electronics, home essentials, or unique gifts, our selection has something for everyone."
+            />
+            <UsersAccordion
+              title="Product Categories"
+              content="To enhance your shopping journey, we've organized our products into various categories. Whether you're looking for the latest fashion trends, cutting-edge electronics, home essentials, or unique gifts, our selection has something for everyone."
+            />
+            <UsersAccordion
+              title={"What is E-Commerce?"}
+              content={
+                "E-commerce, short for electronic commerce, refers to the buying and selling of goods and services over the internet. It has revolutionized the way we shop, providing convenience, accessibility, and a global marketplace at our fingertips. E-commerce encompasses a wide range of online transactions, from purchasing products on online marketplaces to ordering groceries, booking travel accommodations, and subscribing to digital services. In the digital age, e-commerce has become an integral part of modern business strategies. With its ability to reach a vast audience, streamline transactions, and offer personalized shopping experiences, e-commerce has reshaped industries and consumer behaviors."
+              }
+            />
+            <UsersAccordion
+              title="Exploring Our E-Commerce Selection"
+              content="We are excited to present a diverse range of products that cater to your needs and preferences. Our e-commerce platform offers a seamless shopping experience, allowing you to explore, choose, and purchase products from the comfort of your home."
+            />
+            <UsersAccordion
+              title="Product Categories"
+              content="To enhance your shopping journey, we've organized our products into various categories. Whether you're looking for the latest fashion trends, cutting-edge electronics, home essentials, or unique gifts, our selection has something for everyone."
+            />
+            <UsersAccordion
+              title="Product Categories"
+              content="To enhance your shopping journey, we've organized our products into various categories. Whether you're looking for the latest fashion trends, cutting-edge electronics, home essentials, or unique gifts, our selection has something for everyone."
+            />
           </div>
+        </div>
+        <div>
+          <Visitor />
         </div>
       </div>
     </div>

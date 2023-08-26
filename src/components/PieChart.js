@@ -8,6 +8,7 @@ const data01 = [
   { name: "Group C", value: 300 },
   { name: "Group D", value: 200 },
 ];
+
 const data02 = [
   { name: "A1", value: 100 },
   { name: "A2", value: 300 },
@@ -24,7 +25,7 @@ const data02 = [
 
 const PieChartComponent = () => {
   return (
-    <PieChart width={400} height={400} className="bg-[#16193a] rounded-md">
+    <PieChart width={450} height={300}>
       <Pie
         data={data01}
         dataKey="value"

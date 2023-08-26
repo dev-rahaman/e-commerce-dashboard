@@ -1,11 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "flowbite/dist/flowbite.css";
 
 .art {
   font-size: 30px;
   transform: translate(-10%, -10%);
   animation: myFirst 1.5s infinite linear;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(#6d28d9, green);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #a9a9a9;
+  border-radius: 10px;
 }
 
 @keyframes myFirst {
