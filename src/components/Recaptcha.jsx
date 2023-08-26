@@ -12,9 +12,12 @@ const Recaptcha = () => {
   // site key  6Lc9GNknAAAAAHPMm4DNNdq8u7e23UXvW4jqhtIP
   // secret key   6Lc9GNknAAAAALU_LiSYm-hsUBLF-Jgdiias4nEp
 
+  // site key  6Lc8ItknAAAAAO1QT-LKxOsYott_V8VbupcM0u7L
+  // secret key   6Lc8ItknAAAAAO1B9DFYuiUMIbpbh_RJm2p6O8IM
+
   return (
     <ReCAPTCHA
-      sitekey="6Lc9GNknAAAAAHPMm4DNNdq8u7e23UXvW4jqhtIP"
+      sitekey="6Lc8ItknAAAAAO1QT-LKxOsYott_V8VbupcM0u7L"
       onChange={onChange}
     />
   );
