@@ -16,7 +16,7 @@ const UsersAccordion = ({ title, content }) => {
       >
         {title}
       </h2>
-      {isOpen && <div className="p-4">{content}</div>}
+      {isOpen && <div className="p-4 border-b">{content}</div>}
     </div>
   );
 };
