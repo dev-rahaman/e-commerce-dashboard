@@ -70,9 +70,9 @@ const cartItems = [
 
 const AllProducts = () => {
   return (
-    <div class="p-4 sm:ml-64">
+    <div className="p-4 sm:ml-64">
       <PageName name={"All Product"} />
-      <div class="flex flex-wrap justify-center gap-4 p-4 rounded-lg dark:border-gray-700">
+      <div className="flex flex-wrap justify-center gap-4 p-4 rounded-lg dark:border-gray-700">
         {cartItems.map((item) => (
           <>
             <div className="cursor-pointer flex items-center flex-col justify-center border p-4 mb-4 w-[200px] h-[300px]">

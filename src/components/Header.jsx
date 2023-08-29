@@ -20,8 +20,8 @@ const Header = () => {
             </div>
           </li>
         </ol>
-        {/* Middle  Search bar */}
 
+        {/* Middle  Search bar */}
         <form>
           <label
             for="default-search"

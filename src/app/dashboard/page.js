@@ -1,7 +1,8 @@
+"use client";
 import LineChartExample from "@/components/BiaxialLineChart";
 import PieChartComponent from "@/components/PieChart";
 import UsersAccordion from "@/components/UsersAccordion";
-import Visitor from "@/components/Visitor";
+import RecentSeel from "@/components/RecentSeel";
 import BarChartSimple from "@/components/cart";
 import Image from "next/image";
 
@@ -48,7 +49,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 mb-4 ">
+        <div className="lg:grid grid-cols-2 gap-4 mb-4 ">
           <div className="  rounded bg-[#212130] dark:bg-gray-800">
             <h2 className="text-white my-5  text-4xl text-center font-bold">
               To Days Sales
@@ -63,16 +64,16 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 mb-4 ">
+        <div className="lg:grid  grid-cols-2 gap-4 mb-4 ">
           <div className="rounded bg-[#212130] dark:bg-gray-800">
             <h2 className="text-white my-5  text-4xl text-center font-bold">
               To Days Sales
             </h2>
             <PieChartComponent />
           </div>
-          <div className="h-[380px] custom-scrollbar overflow-auto rounded bg-[#212130] dark:bg-gray-800">
+          <div className="h-[380px] lg:mt-0 mt-10 custom-scrollbar overflow-auto rounded bg-[#212130] dark:bg-gray-800">
             <h2 className="text-white my-5  text-4xl text-center font-bold">
-              Recent Activity
+              Request Support
             </h2>
             <UsersAccordion
               title={"What is E-Commerce?"}
@@ -149,7 +150,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div>
-          <Visitor />
+          <RecentSeel />
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const SideBar = () => {
   return (
@@ -9,11 +10,10 @@ const SideBar = () => {
         data-drawer-toggle="default-sidebar"
         aria-controls="default-sidebar"
         type="button"
-        className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500  rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
-        <span className="sr-only">Open sidebar</span>
         <svg
-          className="w-6 h-6"
+          class="w-6 h-6"
           aria-hidden="true"
           fill="currentColor"
           viewBox="0 0 20 20"
@@ -26,6 +26,7 @@ const SideBar = () => {
           ></path>
         </svg>
       </button>
+
       <aside
         id="default-sidebar"
         className="fixed top-14 left-0 z-40 w-64  h-full transition-transform -translate-x-full sm:translate-x-0"

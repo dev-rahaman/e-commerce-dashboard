@@ -8,9 +8,9 @@ const DashboardLayout = ({ children }) => {
       <Header />
       <SideBar />
       <div className="pt-16">{children}</div>
-      <div className="ms-44 mb-5 flex items-center text-center mt-20 justify-center">
+      {/* <div className="lg:ms-44 mb-5 flex items-center text-center mt-20 justify-center">
         Copyright © Designed & Developed by Dev Rahaman 2023
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -20,7 +20,7 @@ const AppProduct = () => {
     <div className="p-4 sm:ml-64">
       <div className="p-4 border-gray-200 rounded-lg dark:border-gray-700">
         <PageName name={"Add Product"} />
-        <div className="grid grid-cols-2 gap-10 mt-10">
+        <div className="lg:grid grid-cols-2 gap-10 mt-10">
           <div className="dark:bg-gray-800 p-10 rounded bg-[#16193a]">
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
@@ -60,7 +60,7 @@ const AppProduct = () => {
             </form>
           </div>
 
-          <div className=" p-10 rounded  bg-[#212130]">
+          <div className="lg:mt-0 mt-5 p-10 rounded  bg-[#212130]">
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
@@ -101,7 +101,7 @@ const AppProduct = () => {
         </div>
 
         {/* Center  */}
-        <div className="grid grid-cols-2 gap-10 mt-10 items-center">
+        <div className="lg:grid grid-cols-2 gap-10 mt-10 items-center">
           <div className="dark:bg-gray-800 p-10 rounded bg-[#212130]">
             <h3 className="text-4xl font-bold text-white">Product Colors</h3>
             <form onSubmit={handleSubmit} className="flex h-48 items-center">
@@ -175,7 +175,7 @@ const AppProduct = () => {
               </div>
             </form>
           </div>
-          <div className="p-10 rounded bg-[#16193a]">
+          <div className="lg:mt-0 mt-5 p-10 rounded bg-[#16193a]">
             <form>
               <label
                 htmlFor="productDescription"
@@ -194,7 +194,7 @@ const AppProduct = () => {
         </div>
 
         {/* Gallery  Section */}
-        <div className="grid grid-cols-2 h-48  gap-10 mt-10 items-center">
+        <div className="lg:grid grid-cols-2 h-48  gap-10 mt-10 items-center">
           <div className="dark:bg-gray-800 p-10 rounded bg-[#16193a]">
             <h3 className="text-4xl font-bold text-white mb-5">Gallery</h3>
             <form className="flex gap-3">
@@ -274,7 +274,7 @@ const AppProduct = () => {
           </div>
 
           {/* Category */}
-          <div className="p-10 h-[240px] rounded bg-[#212130]">
+          <div className="lg:mt-0 mt-5 p-10 h-[240px] rounded bg-[#212130]">
             <h3 className="text-4xl font-bold text-white">Category</h3>
             <form>
               <Select name="cars" id="cars" className="mt-5">

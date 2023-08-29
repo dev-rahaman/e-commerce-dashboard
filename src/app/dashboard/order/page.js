@@ -1,4 +1,6 @@
+"use client";
 import PageName from "@/components/PageName";
+import { Dropdown } from "flowbite-react";
 import Image from "next/image";
 import React from "react";
 const products = [
@@ -97,7 +99,7 @@ const Order = () => {
         </div>
 
         {/* product list  */}
-        <div className="bg-[#031123] rounded text-white container mx-auto p-4">
+        <div className="rounded text-white container mx-auto py-4">
           <table className="w-full border-collapse ">
             <thead>
               <tr>
@@ -127,36 +129,19 @@ const Order = () => {
                   <td className=" p-2">{product.amount}</td>
                   <td className=" p-2">{product.status}</td>
                   <td className=" p-2">{product.rating}</td>
-                  <td className=" p-2 ">
-                    <div className="flex justify-between">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-                        />
-                      </svg>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
-                        />
-                      </svg>
+                  <td>
+                    <div>
+                      <Dropdown className="text-black text-lg ">
+                        <span className="block cursor-pointer py-1 hover:bg-gray-200 p-2 pt-0">
+                          Processing
+                        </span>
+                        <span className="block cursor-pointer py-1 hover:bg-gray-200 p-2 pt-0">
+                          Completed
+                        </span>
+                        <span className="block cursor-pointer py-1 hover:bg-gray-200 p-2 pt-0">
+                          Canceled
+                        </span>
+                      </Dropdown>
                     </div>
                   </td>
                 </tr>
@@ -164,7 +149,7 @@ const Order = () => {
             </tbody>
             <thead>
               <tr>
-                <th className=" p-2 ">ID</th>
+                <th className="p-2">ID</th>
                 <th className="p-2">PRODUCT</th>
                 <th className="p-2">CATEGORY</th>
                 <th className="p-2">AMOUNT</th>
