@@ -8,4 +8,4 @@ const Error = () => {
   );
 };
 
-export default Login;
+export default Error;
