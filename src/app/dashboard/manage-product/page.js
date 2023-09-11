@@ -1,3 +1,4 @@
+import PageName from "@/components/PageName";
 import Image from "next/image";
 import React from "react";
 const items = [
@@ -79,6 +80,7 @@ const ManageProduct = () => {
   return (
     <div className="p-4 sm:ml-64">
       <div className="p-4 border-gray-200 rounded-lg dark:border-gray-700">
+        <PageName name={"Manage Product"} />
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-white dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
