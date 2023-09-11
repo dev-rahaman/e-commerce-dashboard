@@ -1,30 +1,29 @@
 "use client";
-import DropdownIcon from "@/components/DropdownIcon";
+import {
+  ChatIcon,
+  DashboardIcon,
+  DropdownIcon,
+  InventoryIcon,
+  MarketingIcon,
+  OrderIcon,
+  PaymentIcon,
+  ProductsIcon,
+  SupportIcon,
+  UserIcon,
+  VendorIcon,
+} from "@/Icons/page";
 import Link from "next/link";
 import { useState } from "react";
 
-export const Item = ({ menu, link }) => {
+export const Item = ({ menu, link, icon }) => {
   return (
     <ul>
       <li>
         <Link
           href={link}
-          className="flex items-center w-full p-2   text-base hover:bg-gray-600 hover:text-white text-gray-200 transition duration-75 rounded-lg group"
+          className="flex items-center w-full p-2 text-base hover:bg-gray-600 hover:text-white text-gray-200 transition duration-75 rounded-lg group"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 me-2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
-            />
-          </svg>
+          <div className="me-2">{icon}</div>
           {menu}
         </Link>
       </li>
@@ -35,6 +34,7 @@ export const Item = ({ menu, link }) => {
 const dropdown = [
   {
     title: "Products",
+    icon: <ProductsIcon />,
     link: [
       { name: "Add Products", href: "/dashboard/add-product" },
       { name: "All Products", href: "/dashboard/all-product" },
@@ -43,7 +43,8 @@ const dropdown = [
     ],
   },
   {
-    title: "Order",
+    title: "Order Management",
+    icon: <OrderIcon />,
     link: [
       { name: "All Order", href: "/dashboard/order" },
       { name: "Completed Order", href: "/dashboard/completed-order" },
@@ -52,19 +53,65 @@ const dropdown = [
   },
   {
     title: "Users",
+    icon: <UserIcon />,
     link: [
       { name: "All Users", href: "/dashboard" },
       { name: "Customers", href: "/dashboard/customers" },
+      { name: "Reviews & Ratings", href: "/dashboard/customers" },
+      { name: "support and communication", href: "/dashboard/customers" },
       { name: "Sign Up Users", href: "/dashboard/signup-users" },
     ],
   },
   {
     title: "Authentication",
+    icon: <VendorIcon />,
     link: [
       { name: "Sign In", href: "/dashboard/signin" },
       { name: "Sign Up", href: "/dashboard/signup" },
       { name: "My Profile", href: "/dashboard/my-profile" },
     ],
+  },
+  {
+    title: "Payment & Commission",
+    icon: <PaymentIcon />,
+    link: [
+      { name: "Payment Processing", href: "/dashboard/signin" },
+      { name: "Commission", href: "/dashboard/signup" },
+      { name: "Payout Requests", href: "/dashboard/my-profile" },
+    ],
+  },
+  {
+    title: "Inventory Management",
+    icon: <MarketingIcon />,
+    link: [
+      { name: "Stock tracking", href: "/dashboard/signin" },
+      { name: "Low stock alerts", href: "/dashboard/signup" },
+      { name: "Product variations", href: "/dashboard/my-profile" },
+    ],
+  },
+  {
+    title: "Marketing & Promotions",
+    icon: <InventoryIcon />,
+    link: [
+      { name: "Discount & Coupon", href: "/dashboard/signin" },
+      { name: "Product recommendations", href: "/dashboard/signup" },
+      { name: "Email marketing", href: "/dashboard/my-profile" },
+    ],
+  },
+  {
+    title: "Categories",
+    icon: <InventoryIcon />,
+    link: [
+      { name: "Discount & Coupon", href: "/dashboard/signin" },
+      { name: "Product recommendations", href: "/dashboard/signup" },
+      { name: "Email marketing", href: "/dashboard/my-profile" },
+    ],
+  },
+  {
+    title: "Vendor",
+    icon: <VendorIcon />,
+    link: [{ name: "Vendor", href: "/dashboard/vendors" }],
+    link: [{ name: "Vendor verification", href: "/dashboard/vendors" }],
   },
 ];
 
@@ -78,20 +125,24 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="pt-10 h-full overflow-auto custom-scrollbar bg-[#16193a] fixed top-14 left-0 z-40 w-64 transition-transform -translate-x-full sm:translate-x-0">
+    <aside className="pt-10 h-full pb-[50px] overflow-auto custom-scrollbar bg-[#16193a] fixed top-14 left-0 z-40 w-64 transition-transform -translate-x-full sm:translate-x-0">
+      <Item icon={<DashboardIcon />} menu={"Dashboard"} link={"/dashboard"} />
       <ul>
         {dropdown &&
           dropdown.map((item, idx) => (
             <li key={idx}>
-              <div
+              <button
                 onClick={() => handleOpen(idx)}
-                className="flex items-center justify-between hover:bg-gray-600 w-full p-2 text-base hover:text-white text-gray-200 transition duration-75 rounded-lg group cursor-pointer"
+                className="flex items-center w-full my-2 p-2 text-base text-white transition duration-75 rounded-lg group hover:bg-gray-400 dark:text-white dark:hover:bg-gray-700"
                 aria-controls={`dropdown-example-${idx}`}
                 data-collapse-toggle={`dropdown-example-${idx}`}
               >
-                {item.title}
+                {item.icon}
+                <span class="flex-1 ml-2 text-left whitespace-nowrap">
+                  {item.title}
+                </span>
                 <DropdownIcon />
-              </div>
+              </button>
               {open[idx] && (
                 <ul id={`dropdown-example-${idx}`}>
                   {item?.link?.map((linkItem, linkIdx) => (
@@ -108,7 +159,38 @@ export default function Sidebar() {
             </li>
           ))}
       </ul>
-      <Item menu={"support"} link={"/dashboard/support"} />
+      <Item
+        icon={<SupportIcon />}
+        menu={"support"}
+        link={"/dashboard/support"}
+      />
+      <Item icon={<ChatIcon />} menu={"Chat"} link={"/dashboard/chat"} />
     </aside>
   );
+}
+
+{
+  /* <button className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+  <SupportIcon />
+  <span class="flex-1 ml-3 text-left whitespace-nowrap">E-commerce</span>
+  <SupportIcon />
+</button>; 
+
+
+*/
+}
+
+{
+  /* <div
+                onClick={() => handleOpen(idx)}
+                className="flex items-center gap-3  hover:bg-gray-600 w-full p-2 text-base hover:text-white text-gray-200 transition duration-75 rounded-lg group cursor-pointer"
+                aria-controls={`dropdown-example-${idx}`}
+                data-collapse-toggle={`dropdown-example-${idx}`}
+              >
+                {item.icon}
+                <div>{item.title}</div>
+                <div className="flex justify-end">
+                  <DropdownIcon />
+                </div>
+              </div> */
 }
