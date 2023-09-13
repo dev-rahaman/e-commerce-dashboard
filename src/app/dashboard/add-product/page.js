@@ -11,7 +11,6 @@ const AppProduct = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Here you can perform any actions with the form data, like submitting to a server
     console.log("Product Name:", productName);
     console.log("Product Title:", productTitle);
   };

@@ -2,7 +2,7 @@ import React from "react";
 
 const PageName = ({ name }) => {
   return (
-    <div className="flex items-center text-white justify-between h-20 mb-4 rounded-lg bg-[#031123] dark:bg-gray-800 p-4">
+    <div className="flex mt-10 lg:mt-2 items-center text-white justify-between h-20 mb-4 rounded-lg bg-[#031123] dark:bg-gray-800 p-4">
       <p className="text-white lg:text-4xl font-bold dark:text-gray-500  ">
         {name}
       </p>

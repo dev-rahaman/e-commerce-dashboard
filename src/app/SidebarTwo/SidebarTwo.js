@@ -1,4 +1,6 @@
 "use client";
+import { AuthContext } from "@/AuthProvider/AuthProvider";
+
 import {
   ChatIcon,
   DashboardIcon,
@@ -13,7 +15,7 @@ import {
   VendorIcon,
 } from "@/Icons/page";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 export const Item = ({ menu, link, icon }) => {
   return (
@@ -117,6 +119,7 @@ const dropdown = [
 
 export default function Sidebar() {
   const [open, setOpen] = useState([]);
+  const { showSidebar } = useContext(AuthContext);
 
   const handleOpen = (idx) => {
     const newOpenState = [...open];
@@ -125,7 +128,9 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="pt-10 h-full pb-[50px] overflow-auto custom-scrollbar bg-[#16193a] fixed top-14 left-0 z-40 w-64 transition-transform -translate-x-full sm:translate-x-0">
+    <aside
+      className={`${showSidebar} pt-10 h-full pb-[50px] overflow-auto custom-scrollbar bg-[#16193a] fixed top-14 left-0 z-40 w-64 transition-transform sm:translate-x-0`}
+    >
       <Item icon={<DashboardIcon />} menu={"Dashboard"} link={"/dashboard"} />
       <ul>
         {dropdown &&
@@ -144,7 +149,7 @@ export default function Sidebar() {
                 <DropdownIcon />
               </button>
               {open[idx] && (
-                <ul id={`dropdown-example-${idx}`}>
+                <div id={`dropdown-example-${idx}`}>
                   {item?.link?.map((linkItem, linkIdx) => (
                     <Link
                       href={linkItem.href}
@@ -154,7 +159,7 @@ export default function Sidebar() {
                       {linkItem.name}
                     </Link>
                   ))}
-                </ul>
+                </div>
               )}
             </li>
           ))}
@@ -167,30 +172,4 @@ export default function Sidebar() {
       <Item icon={<ChatIcon />} menu={"Chat"} link={"/dashboard/chat"} />
     </aside>
   );
-}
-
-{
-  /* <button className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-  <SupportIcon />
-  <span class="flex-1 ml-3 text-left whitespace-nowrap">E-commerce</span>
-  <SupportIcon />
-</button>; 
-
-
-*/
-}
-
-{
-  /* <div
-                onClick={() => handleOpen(idx)}
-                className="flex items-center gap-3  hover:bg-gray-600 w-full p-2 text-base hover:text-white text-gray-200 transition duration-75 rounded-lg group cursor-pointer"
-                aria-controls={`dropdown-example-${idx}`}
-                data-collapse-toggle={`dropdown-example-${idx}`}
-              >
-                {item.icon}
-                <div>{item.title}</div>
-                <div className="flex justify-end">
-                  <DropdownIcon />
-                </div>
-              </div> */
 }

@@ -10,7 +10,7 @@ const Dashboard = () => {
   return (
     <div className="p-4 sm:ml-64">
       <div className="p-4 border-gray-200 rounded-lg dark:border-gray-700">
-        <div className="lg:grid grid-cols-3 gap-4 mb-4">
+        <div className="lg:grid grid-cols-3 mt-7 lg:mt-2 gap-4 mb-4">
           <div className="mb-5 flex items-center justify-between h-24 rounded text-white bg-[#497cf1] p-3 dark:bg-gray-800">
             <div>
               <h3 className="font-extrabold">Shipped orders</h3>
