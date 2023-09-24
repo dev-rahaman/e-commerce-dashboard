@@ -56,7 +56,7 @@ const Dashboard = () => {
             </h2>
             <BarChartSimple />
           </div>
-          <div className="  rounded bg-[#212130] dark:bg-gray-800">
+          <div className="rounded bg-[#212130] dark:bg-gray-800">
             <h2 className="text-white my-5  text-4xl text-center font-bold">
               Recent Activity
             </h2>
